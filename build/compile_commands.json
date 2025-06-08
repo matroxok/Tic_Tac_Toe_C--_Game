@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/KolkoIKrzyzyk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\KolkoIKrzyzyk.dir\\src\\gui.cpp.obj -c \"C:\\Users\\matro\\Desktop\\visual studio code\\Kolko_i_krzyzyk\\src\\gui.cpp\"",
+  "file": "C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/src/gui.cpp",
+  "output": "CMakeFiles/KolkoIKrzyzyk.dir/src/gui.cpp.obj"
+},
+{
+  "directory": "C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/KolkoIKrzyzyk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\KolkoIKrzyzyk.dir\\src\\ai.cpp.obj -c \"C:\\Users\\matro\\Desktop\\visual studio code\\Kolko_i_krzyzyk\\src\\ai.cpp\"",
+  "file": "C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/src/ai.cpp",
+  "output": "CMakeFiles/KolkoIKrzyzyk.dir/src/ai.cpp.obj"
+},
+{
+  "directory": "C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/KolkoIKrzyzyk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\KolkoIKrzyzyk.dir\\src\\board.cpp.obj -c \"C:\\Users\\matro\\Desktop\\visual studio code\\Kolko_i_krzyzyk\\src\\board.cpp\"",
+  "file": "C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/src/board.cpp",
+  "output": "CMakeFiles/KolkoIKrzyzyk.dir/src/board.cpp.obj"
+},
+{
+  "directory": "C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/KolkoIKrzyzyk.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\KolkoIKrzyzyk.dir\\src\\game.cpp.obj -c \"C:\\Users\\matro\\Desktop\\visual studio code\\Kolko_i_krzyzyk\\src\\game.cpp\"",
+  "file": "C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/src/game.cpp",
+  "output": "CMakeFiles/KolkoIKrzyzyk.dir/src/game.cpp.obj"
+}
+]
