@@ -12,8 +12,8 @@ Move Game::playerMove() {
     while (true) {
         std::cout << "Ruch gracza " << currentPlayer << " (wiersz kolumna): ";
         std::cin >> row >> col;
-        row -= 1; // Dostosowanie do indeksowania od 0
-        col -= 1; // Dostosowanie do indeksowania od 0
+        row -= 1; // Trzeba odją 1, bo c++ podobnie do JS ma indeksowanie od 0
+        col -= 1; // Trzeba odją 1, bo c++ podobnie do JS ma indeksowanie od 0
         if (board.makeMove(row, col, currentPlayer)) {
             break;
         } else {

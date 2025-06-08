@@ -86,58 +86,63 @@ void drawMenu(sf::RenderWindow& window) {
     window.clear(sf::Color::White);
 
     sf::Text title("Ustawienia gry", globalFont, 36);
-    title.setPosition(180, 30);
     title.setFillColor(sf::Color::Black);
+    title.setPosition((windowSize - title.getLocalBounds().width) / 2, 40);
     window.draw(title);
 
     sf::Text gridText("Rozmiar planszy: " + std::to_string(gridSize), globalFont, 24);
-    gridText.setPosition(160, 100);
     gridText.setFillColor(sf::Color::Black);
+    gridText.setPosition((windowSize - gridText.getLocalBounds().width) / 2, 120);
     window.draw(gridText);
 
     sf::Text winText("Wygrana przy: " + std::to_string(winLength), globalFont, 24);
-    winText.setPosition(160, 150);
     winText.setFillColor(sf::Color::Black);
+    winText.setPosition((windowSize - winText.getLocalBounds().width) / 2, 170);
     window.draw(winText);
 
     sf::Text decreaseGrid("[-]", globalFont, 24);
-    decreaseGrid.setPosition(120, 100);
     decreaseGrid.setFillColor(sf::Color::Red);
+    decreaseGrid.setPosition(100, 120);
     window.draw(decreaseGrid);
 
     sf::Text increaseGrid("[+]", globalFont, 24);
-    increaseGrid.setPosition(360, 100);
     increaseGrid.setFillColor(sf::Color::Green);
+    increaseGrid.setPosition(450, 120);
     window.draw(increaseGrid);
 
     sf::Text decreaseWin("[-]", globalFont, 24);
-    decreaseWin.setPosition(120, 150);
     decreaseWin.setFillColor(sf::Color::Red);
+    decreaseWin.setPosition(100, 170);
     window.draw(decreaseWin);
 
     sf::Text increaseWin("[+]", globalFont, 24);
-    increaseWin.setPosition(360, 150);
     increaseWin.setFillColor(sf::Color::Green);
+    increaseWin.setPosition(450, 170);
     window.draw(increaseWin);
 
     sf::Text startButton("[ Start gry ]", globalFont, 28);
-    startButton.setPosition(200, 220);
     startButton.setFillColor(sf::Color::Blue);
+    startButton.setPosition((windowSize - startButton.getLocalBounds().width) / 2, 250);
     window.draw(startButton);
+
+    sf::Text author("Mateusz Kozoera 281801", globalFont, 16);
+    author.setFillColor(sf::Color::Black);
+    author.setPosition((windowSize - author.getLocalBounds().width) / 2, windowSize - 40);
+    window.draw(author);
 
     window.display();
 }
 
 void handleMenuClick(int x, int y) {
-    if (y >= 220 && y <= 260 && x >= 200 && x <= 400) {
+    if (y >= 250 && y <= 290 && x >= 200 && x <= 400) {
         board = Board(gridSize, winLength);
         inMenu = false;
-    } else if (y >= 100 && y <= 130) {
+    } else if (y >= 120 && y <= 150) {
         if (x < 160 && gridSize > 3) gridSize--;
-        else if (x > 350 && gridSize < 10) gridSize++;
-    } else if (y >= 150 && y <= 180) {
+        else if (x > 420 && gridSize < 10) gridSize++;
+    } else if (y >= 170 && y <= 200) {
         if (x < 160 && winLength > 3) winLength--;
-        else if (x > 350 && winLength < gridSize) winLength++;
+        else if (x > 420 && winLength < gridSize) winLength++;
     }
 }
 
