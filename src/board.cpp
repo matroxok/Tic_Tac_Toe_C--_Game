@@ -6,7 +6,6 @@ Board::Board(int size, int winLength) : size(size), winLength(winLength) {
 }
 
 void Board::print() const {
-    // Rysowanie planszy w terminalu
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
             std::cout << " " << grid[i][j] << " ";
@@ -20,8 +19,12 @@ void Board::print() const {
 }
 
 bool Board::makeMove(int row, int col, char player) {
-    // Próba wstawienia znaku gracza – tylko jeśli pole puste
-    if (row >= 0 && row < size && col >= 0 && col < size && grid[row][col] == ' ') {
+    if (row < 0 || row >= size || col < 0 || col >= size) return false;
+    if (player == ' ') {
+        grid[row][col] = ' ';
+        return true;
+    }
+    if (grid[row][col] == ' ') {
         grid[row][col] = player;
         return true;
     }
@@ -38,18 +41,15 @@ bool Board::isFull() const {
 }
 
 bool Board::checkWin(int row, int col, char player) const {
-    // Sprawdzamy 4 kierunki: poziomo, pionowo, ukośnie 
-    return checkDirection(row, col, 0, 1, player) ||  // poziomo
-           checkDirection(row, col, 1, 0, player) ||  // pionowo
-           checkDirection(row, col, 1, 1, player) ||  // ukośnie
-           checkDirection(row, col, 1, -1, player);   // ukośnie /
+    return checkDirection(row, col, 0, 1, player) ||
+           checkDirection(row, col, 1, 0, player) ||
+           checkDirection(row, col, 1, 1, player) ||
+           checkDirection(row, col, 1, -1, player);
 }
 
 bool Board::checkDirection(int row, int col, int dRow, int dCol, char player) const {
-    // Liczy ile znaków gracza występuje w danym kierunku
     int count = 1;
 
-    // W jedną stronę
     int r = row + dRow, c = col + dCol;
     while (r >= 0 && r < size && c >= 0 && c < size && grid[r][c] == player) {
         count++;
@@ -57,7 +57,6 @@ bool Board::checkDirection(int row, int col, int dRow, int dCol, char player) co
         c += dCol;
     }
 
-    // W drugą stronę
     r = row - dRow, c = col - dCol;
     while (r >= 0 && r < size && c >= 0 && c < size && grid[r][c] == player) {
         count++;

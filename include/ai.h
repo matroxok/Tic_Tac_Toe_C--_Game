@@ -8,7 +8,6 @@ struct Move {
     int col;
 };
 
-// depthLimit domyślnie -1 oznacza brak limitu
-Move getBestMove(Board board, char aiPlayer, char humanPlayer, int depthLimit = -1);
+Move getBestMove(Board board, char aiPlayer, char humanPlayer, int winLength, int depthLimit = -1);
 
 #endif

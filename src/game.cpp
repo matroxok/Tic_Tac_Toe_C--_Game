@@ -26,7 +26,9 @@ Move Game::playerMove() {
 
 Move Game::aiMove() {
     std::cout << "Ruch komputera...\n";
-    Move move = getBestMove(board, currentPlayer, currentPlayer == 'X' ? 'O' : 'X', 4);
+    Move move = getBestMove(board, currentPlayer, currentPlayer == 'X' ? 'O' : 'X',
+                            board.getSize() >= 5 ? 4 : board.getSize()); // przekazujemy winLength
+
     if (move.row != -1 && move.col != -1) {
         board.makeMove(move.row, move.col, currentPlayer);
         board.print();
@@ -35,6 +37,7 @@ Move Game::aiMove() {
     }
     return move;
 }
+
 
 void Game::run() {
     board.print();
