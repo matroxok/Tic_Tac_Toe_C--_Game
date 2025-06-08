@@ -1,3 +1,0 @@
-C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/build/CMakeFiles/KolkoIKrzyzyk.dir
-C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/build/CMakeFiles/edit_cache.dir
-C:/Users/matro/Desktop/visual studio code/Kolko_i_krzyzyk/build/CMakeFiles/rebuild_cache.dir
