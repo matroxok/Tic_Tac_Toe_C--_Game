@@ -71,6 +71,10 @@ int Board::getSize() const {
     return size;
 }
 
+int Board::getWinLength() const {
+    return winLength;
+}
+
 char Board::getCell(int row, int col) const {
     return grid[row][col];
 }

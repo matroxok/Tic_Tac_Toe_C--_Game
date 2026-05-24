@@ -70,7 +70,6 @@ int minimax(Board& board, int depth, bool maximizingPlayer,
                     if (eval > maxEval) {
                         maxEval = eval;
                         bestMove = {r, c};
-                        // std::cout << "[AI DEBUG] Max wybiera (" << r << "," << c << ") z oceną " << eval << "\n";
                     }
                     alpha = std::max(alpha, eval);
                     if (beta <= alpha) return maxEval;

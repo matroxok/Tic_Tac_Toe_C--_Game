@@ -16,6 +16,7 @@ public:
     bool checkWin(int row, int col, char player) const;
     bool checkDirection(int row, int col, int dRow, int dCol, char player) const;
     int getSize() const;
+    int getWinLength() const;
     char getCell(int row, int col) const;
 };
 
