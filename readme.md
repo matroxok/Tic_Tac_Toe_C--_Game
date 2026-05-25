@@ -1,21 +1,29 @@
-### Instruckja uruchamiania / Installation Manual:
+### Instrukcja uruchamiania
 
-1) Build za pomocą cmake / CMake Build
-    
-    Wymagania instalacyjne / dependencies:
-    - MinGw GCC compiler
-    - Cmake
-    - SFML lib
-    - MSYS2 
-<br>
+Najprosciej odpalic gotowy plik `.exe` z folderu `build`:
 
-2) Przejście do folderu i uruchomienie aplikacji
-
-```dotnetcli
-cd build/
-
-./KolkoIKrzyzyk.exe
+```powershell
+cd build
+.\KolkoIKrzyzyk.exe
 ```
 
-<br>
-Edit: na chwilę obecną nie udało mi się rozwiązac problemu z brakiem dependencies do uruchamiania programu samym .exe z dynamicznymi plikami bez pełnego builda :/ 
+Mozesz tez uruchomic go bez zmiany katalogu:
+
+```powershell
+.\build\KolkoIKrzyzyk.exe
+```
+
+Jesli zmieniasz kod, przebuduj projekt:
+
+```powershell
+cmake --build build
+```
+
+Wymagania do pelnego builda:
+
+- MinGW GCC compiler
+- CMake
+- SFML
+- MSYS2
+
+Pliki `.dll` i czcionki potrzebne do uruchomienia sa skopiowane do folderu `build`.
